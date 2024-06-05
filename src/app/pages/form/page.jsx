@@ -10,6 +10,7 @@ const FormPage = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
+  const [program, setProgram] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const router = useRouter();
@@ -18,7 +19,7 @@ const FormPage = () => {
     event.preventDefault();
     setIsSubmitting(true);
 
-    const formData = { name, company, email, phone };
+    const formData = { name, company, email, phone, program };
 
     try {
       const response = await axios.post("/api/get-program", formData);
@@ -28,6 +29,7 @@ const FormPage = () => {
         setEmail("");
         setPhone("");
         setCompany("");
+        setProgram("");
       } else {
         alert(response.data.message);
       }
@@ -89,6 +91,17 @@ const FormPage = () => {
             required
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+          />
+        </label>
+        <label>
+          Nombre del programa*
+          <input
+            type="text"
+            name="program"
+            placeholder="Nombre del programa"
+            required
+            value={program}
+            onChange={(e) => setProgram(e.target.value)}
           />
         </label>
         <button type="submit" disabled={isSubmitting}>
