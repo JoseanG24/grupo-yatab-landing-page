@@ -42,26 +42,27 @@ function Footer() {
         <h2>Hablemos sobre tu negocio.</h2>
         <div className={styles.contactInfo}>
           <div className={styles.infoItem}>
-            <div>
-              <span className={styles.icon}>📍</span>
-              <p>Nos ubicamos en</p>
-              <p>ejemplo de dirección, Ciudad de Guatemala</p>
-            </div>
+
           </div>
           <div className={styles.infoItem}>
             <div>
               <span className={styles.icon}>📧</span>
               <p>Nuestros Contactos</p>
               <h3 className={styles.name}>Oscar Rojas</h3>
-              <p>orojas@ayatab.com</p>
+              <p>orojas@yatabgt.com</p>
+              <h3 className={styles.name}>Glenda Hernandez</h3>
+              <p>ghernandez@yatabgt.com</p>
+              <h3 className={styles.name}>General</h3>
+              <p>info@yatabgt.com</p>
             </div>
           </div>
           <div className={styles.infoItem}>
             <div>
               <span className={styles.icon}>👥</span>
               <p>Síguenos en nuestras redes</p>
-              <h3 className={styles.name}>LinkedIn</h3>
-              <p>orojas@ayatab.com</p>
+              <h3 className={styles.link}><a href="https://www.linkedin.com/company/grupo-yatab-guatemala/">LinkedIn</a></h3>
+              <h3 className={styles.link}><a href="https://www.instagram.com/yatabgt/" target="blank_">Instagram</a></h3>
+              <h3 className={styles.link}><a href="https://www.facebook.com/profile.php?id=61552782488866&locale=es_LA" target="blank_">Facebook</a></h3>
             </div>
           </div>
         </div>

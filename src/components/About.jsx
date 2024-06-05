@@ -40,7 +40,7 @@ const About = () => {
           Nos dedicamos a buscar el mejor conocimiento disponible, estableciendo
           relaciones sólidas con la academia, universidades, el mundo
           empresarial y otros consultores expertos, todo con el objetivo de
-          ofrecer la solución más avanzada y efectiva disponible en el mercado
+          ofrecer la solución más avanzada y efectiva disponible en el mercado.
         </p>
       </div>
     </div>
