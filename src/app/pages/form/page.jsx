@@ -98,7 +98,7 @@ const FormPage = () => {
           <input
             type="text"
             name="program"
-            placeholder="Nombre del programa"
+            placeholder="Nombre del programa que desea obtener"
             required
             value={program}
             onChange={(e) => setProgram(e.target.value)}

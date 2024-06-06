@@ -13,21 +13,21 @@ const credentials = {
   auth_provider_x509_cert_url: process.env.AUTH_PROVIDER_X509_CERT_URL_PROGRAM,
   client_x509_cert_url: process.env.CLIENT_X509_CERT_URL_PROGRAM,
   universe_domain: process.env.UNIVERSE_DOMAIN,
-}
+};
 
 const auth = new google.auth.GoogleAuth({
   credentials: credentials,
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
-const spreadsheetId = "1BQnhJhjd31oZsO57S9OGHoWIICINyhkZ3O3aZtZezmY"; 
+const spreadsheetId = "1BQnhJhjd31oZsO57S9OGHoWIICINyhkZ3O3aZtZezmY";
 
 export const POST = async (request: NextRequest) => {
   try {
-    const { name, company, email, phone } = await request.json();
+    const { name, company, email, phone, program } = await request.json();
 
     // Validate fields
-    if (!name || !company || !email || !phone) {
+    if (!name || !company || !email || !phone || program) {
       return NextResponse.json({
         message: "Por favor compelete todos los campos",
       });
@@ -55,10 +55,10 @@ export const POST = async (request: NextRequest) => {
     // Upload data onto the spreadsheet
     await googleSheets.spreadsheets.values.append({
       spreadsheetId,
-      range: "hoja principal!A:D",
+      range: "hoja principal!A:E",
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [[name, company, email, phone]],
+        values: [[name, company, email, phone, program]],
       },
     });
 
