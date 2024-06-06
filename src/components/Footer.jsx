@@ -41,9 +41,7 @@ function Footer() {
       <div className={styles.leftSection}>
         <h2>Hablemos sobre tu negocio.</h2>
         <div className={styles.contactInfo}>
-          <div className={styles.infoItem}>
-
-          </div>
+          <div className={styles.infoItem}></div>
           <div className={styles.infoItem}>
             <div>
               <span className={styles.icon}>📧</span>
@@ -60,9 +58,24 @@ function Footer() {
             <div>
               <span className={styles.icon}>👥</span>
               <p>Síguenos en nuestras redes</p>
-              <h3 className={styles.link}><a href="https://www.linkedin.com/company/grupo-yatab-guatemala/">LinkedIn</a></h3>
-              <h3 className={styles.link}><a href="https://www.instagram.com/yatabgt/" target="blank_">Instagram</a></h3>
-              <h3 className={styles.link}><a href="https://www.facebook.com/profile.php?id=61552782488866&locale=es_LA" target="blank_">Facebook</a></h3>
+              <h3 className={styles.link}>
+                <a href="https://www.linkedin.com/company/grupo-yatab-guatemala/" target="blank_">
+                  LinkedIn
+                </a>
+              </h3>
+              <h3 className={styles.link}>
+                <a href="https://www.instagram.com/yatabgt/" target="blank_">
+                  Instagram
+                </a>
+              </h3>
+              <h3 className={styles.link}>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61552782488866&locale=es_LA"
+                  target="blank_"
+                >
+                  Facebook
+                </a>
+              </h3>
             </div>
           </div>
         </div>
